@@ -1,0 +1,47 @@
+{% load static %}
+<section id="slider"><!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+                    
+                    <div class="carousel-inner">
+                        {% for slider in sliders %}
+                            {% if slider.is_active %}
+                                <div class="item {% if forloop.counter == 1 %} active {% endif %}">
+                                    <div class="col-sm-6">
+                                        <h1>{{slider.title|safe}}</h1>
+                                        <h2>{{slider.subtitle}}</h2>
+                                        <p>{{slider.description|safe}}</p>
+                                        <a href="{{slider.link}}" type="button" class="btn btn-default get">İnceleyin</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="{{slider.link}}">
+                                        <img src="{{slider.image.url}}" class="girl img-responsive" alt="{{slider.title}}" /></a>
+                                        <img src="{{slider.price_image.url}}"  class="pricing" alt="" />
+                                    </div>
+                                        
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                            
+                        
+                    </div>
+                    
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->

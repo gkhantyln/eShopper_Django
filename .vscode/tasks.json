@@ -1,0 +1,208 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe etkin dosyayı derle",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: C:\\MinGW\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe etkin dosyayı derle",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "derleyici: C:\\MinGW\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "C:\\MinGW\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: C:\\MinGW\\bin\\cpp.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cpp.exe etkin dosyayı derle",
+			"command": "D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "derleyici: D:\\Drivers\\derleyiciler\\mingw32\\bin\\cpp.exe"
+		}
+	]
+}

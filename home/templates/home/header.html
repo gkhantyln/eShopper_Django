@@ -1,0 +1,150 @@
+{% load static %}
+<header id="header"><!--header-->
+    <div class="header_top"><!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> {{ settings.phone }} </a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> {{ settings.email }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ settings.facebook }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ settings.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ settings.linkdn }}"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{ settings.youtube }}"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="{{ settings.dribbble }}"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="{{ settings.googleplus }}"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header_top-->
+    
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/"><img src="{{ settings.logo.url }}" alt="{{ settings.title }}" /></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                USA
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Türkçe</a></li>
+                                <li><a href="#">UK</a></li>
+                                <li><a href="#">Canada</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                DOLLAR
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Canadian Dollar</a></li>
+                                <li><a href="#">Pound</a></li>
+                                <li><a href="#">Türk Lirası</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            
+                            
+                            {% if user.id is not None %}
+
+                            <li class="dropdown"><a href="/account"> <i class="fa fa-user text-uppercase"><i class="fa-angle-down"></i></i> Hoşgeldin, {{ user.get_full_name|title }}</a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="/account"> Kullanıcı Hesabı</a></li>
+                                    <li><a href="/logout"> Çıkış Yap</a></li>  
+                                </ul>
+                            </li>
+
+
+                            <!--<li><a href="/wishlist"><i class="fa fa-star"></i> Karşılaştırma</a></li>-->
+                            <li><a href="/checkout"><i class="fa fa-crosshairs"></i> Sipariş</a></li>
+                            <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Sepetim</a></li>
+                            
+
+                            
+                            {% else %}
+
+                            <li><a href="/sign-up"><i class="fa fa-user"></i> Kayıt Ol</a></li>
+                            <li><a href="/login"><i class="fa fa-lock"></i> Giriş Yap</a></li>
+
+                            <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Sepetim</a></li>
+                            
+
+                            {% endif %}
+                            
+                            
+
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/" class="active">Ana Sayfa</a></li>
+                            <li><a href="/products">Ürünler<i class="fa fa-angle"></i></a>
+                                <!--<ul role="menu" class="sub-menu">
+                                    <li><a href="/product-details">Ürün Detayları</a></li> 
+                                </ul>-->
+                            </li> 
+                            <li class="dropdown"><a href="/blogs">Blog<i class="fa fa-angle-down"></i></a>
+                                <!--<ul role="menu" class="sub-menu">
+                                    <li><a href="">Blog List</a></li>
+                                    <li><a href="/blog-details">Blog Single</a></li>
+                                </ul>-->
+                            </li> 
+                            <li><a href="/about-us">Hakkımızda</a></li>
+                            <li><a href="/contact">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    
+                    <div class="search_box pull-right">
+                        <form action="/search/" metod="post">
+                            {% csrf_token %}
+                            <input name="query" type="text" placeholder="Arama"/>
+                            <button class="search-btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header><!--/header-->

@@ -1,0 +1,82 @@
+{% extends 'home/homebase.html' %}
+
+{% block title %} {{ settings.title }} {% endblock %}
+{% block keywords %} {{ settings.keywords }} {% endblock %}
+{% block author %} {{ settings.author }} {% endblock %}
+{% block description %} {{ settings.description }} {% endblock %}
+
+{% block container %}
+{% load static %}
+<div id="contact-page" class="container">
+    <div class="bg">
+        <div class="row">    		
+            <div class="col-sm-12">    			   			
+                <h2 class="title text-center">Bizimle <strong>İletişim</strong></h2>    			    				    				
+                
+            </div>			 		
+        </div>    	
+        <div class="row">  	
+            <div class="col-sm-8">
+                <div class="contact-form">
+                    <h2 class="title text-center">İletişim Kurun</h2>
+                    {% if messages %}
+                        {% for message in messages %}
+
+                    <div class="status alert alert-{{message.tags}}">
+                            {{message}}
+                    </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form id="main-contact-form" class="contact-form row" name="contact-form" actions="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group col-md-12">
+                            {{ form.as_p }}
+                        </div>                        
+                        <div class="form-group col-md-12">
+                            <input type="submit" name="submit" class="btn btn-primary pull-right" value="Gönder">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="contact-info">
+                    <h2 class="title text-center">İletişim Bilgileri</h2>
+                    <address>
+                        {{ settings.contactsme|safe }}
+                    </address>
+                    <div class="social-networks">
+                        <h2 class="title text-center">Sosyal Ağ Adresileri</h2>
+                        <ul>
+                            <li>
+                                <a href="{{ settings.facebook }}"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.twitter }}"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.googleplus }}"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.youtube }}"><i class="fa fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    			
+        </div>
+        <div id="gmap" class="contact-map">
+        </div>  
+    </div>	
+</div><!--/#contact-page-->
+{% endblock %}
+
+{% load static %}
+
+
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="{% static 'js/gmaps.js' %}"></script>
+	<script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+</body>
+</html>

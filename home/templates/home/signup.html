@@ -1,0 +1,39 @@
+{% extends 'home/homebase.html' %}
+
+{% block title %} Kayıt Ol | {{ settings.title }} {% endblock %}
+{% block keywords %} {{ settings.keywords }} {% endblock %}
+{% block author %} {{ settings.author }} {% endblock %}
+{% block description %} {{ settings.description }} {% endblock %}
+
+{% block container %}
+<section><!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="signup-form"><!--sign up form-->
+                    <h2>Yeni Kullanıcı Kaydı!</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% if rerror %}
+                            <div class="alert alert-warning">{{rerror}}</div>
+                        {% endif %}
+                        {% if success %}
+                            <div class="alert alert-success">{{success}}</div>
+                        {% endif %}
+                        <input type="text" class="form-control" placeholder="Adınız" name="firstname" value="{{firstname}}"/>
+                        <input type="text" class="form-control" placeholder="Soyadınız" name="lastname" value="{{lastname}}" />
+                        <input type="text" class="form-control" placeholder="Kullanıcı Adı" name="username" value="{{username}}"/>
+                        <input type="email" class="form-control" placeholder="E-Mail Adresiniz" name="email" value="{{email}}"/>
+                        <input type="password" class="form-control" placeholder="Şifreniz" name="password"/>
+                        <input type="password" class="form-control" placeholder="Şifreniz Tekrar" name="re-password"/>
+                        <button type="submit" class="btn btn-default">Kayıt Ol</button>
+                    </form>
+                </div><!--/sign up form-->
+            </div>
+        </div>
+    </div>
+</section><!--/form-->
+{% endblock %}
+
+</body>
+</html>

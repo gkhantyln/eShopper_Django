@@ -1,0 +1,45 @@
+{% extends 'home/homebase.html' %}
+
+{% block title %} {{ settings.title }} {% endblock %}
+{% block keywords %} {{ settings.keywords }} {% endblock %}
+{% block author %} {{ settings.author }} {% endblock %}
+{% block description %} {{ settings.description }} {% endblock %}
+
+{% block container %}
+{% load static %}
+<div id="about-page" class="container">
+    <div class="blog-post-area">
+        <h2 class="title text-center">Şirket Hakkında</h2>
+        <div class="single-blog-post">
+            <h3>{{ settings.company }}</h3>
+            <div class="post-meta">
+                <ul>
+                    <li><i class="fa fa-user"></i> {{ settings.author }}</li>
+                    <li><i class="fa fa-clock-o"></i> {{ settings.worktime }}</li>
+                    <li><i class="fa fa-calendar"></i> {{ settings.create_at }}</li>
+                </ul>
+                <span>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </span>
+            </div>
+            <a href="/">
+                <img src="" alt="{{ settings.title }}">
+            </a>
+            {{ settings.aboutus|safe }}
+            <div class="pager-area">
+                <ul class="pager pull-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/blog-post-area-->	
+</div><!--/#contact-page-->
+{% endblock %}
+
+</body>
+</html>
